@@ -22,6 +22,7 @@ const getOneFood = async (req, res) => {
     }
     res.status(200).json(food);
 }
+
 //post a new food item
 const createFood = async (req, res) => {
     const {name, calories, type} = req.body;
@@ -31,7 +32,7 @@ const createFood = async (req, res) => {
         const food = await Food.create({name, calories, type});
         res.status(200).json(food);
     } catch (error) {
-        res.status(400).json({error: error.message});
+        res.status(404).json({error: error.message});
     }
 }
 
@@ -61,7 +62,8 @@ const updateFood = async (req, res) => {
         return res.status(404).json({message: 'Food not found'});
     }
     
-    const food = await Food.findByIdAndUpdate({_id:id}, req.body, {new:true});
+    const food = await Food.findByIdAndUpdate({_id:id}, {name,calories
+        ,type},{new:true});
 
     if(!food){
         return res.status(404).json({message: 'Food not found'});
