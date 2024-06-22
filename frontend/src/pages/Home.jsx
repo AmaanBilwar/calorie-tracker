@@ -8,6 +8,9 @@ const Home = () => {
          Welcome to calorie tracker
          </h1>
       </div>
+      <div className='flex justify-center align-center pt-12 '>
+        Main backend stuff displayed here
+      </div>
     </>
   )
 }
