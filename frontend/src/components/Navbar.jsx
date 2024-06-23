@@ -5,20 +5,37 @@ const Navbar = () => {
   return (
     <>
       <header>
-        <div>
-        <h1>
-            <Link to ="/">
+        <div className='flex justify-center align-center'> 
+        <div className='p-2'>
+          <div className='bg-grey-50 rounded-lg hover:bg-pink-200 p-2'>
+          < Link to ="/">
             Home
             </Link>
-            <Link to ="/About">
+          </div>
+            
+        </div>
+        <div className='p-2'> 
+          <div className='bg-grey-50  rounded-lg hover:bg-pink-200 p-2'>
+          <Link to ="/About">
             About me
             </Link>
-            <Link to ="/Support">
+          </div>
+        
+        </div>
+            <div className='p-2'>
+              <div className='bg-grey-50  rounded-lg hover:bg-pink-200 p-2'>
+                <Link to ="/Support">
             Support me
-            </Link>
-        </h1>
+            </Link></div></div>
+              
+            
         </div>
       </header>
+
+
+       <div>
+        
+       </div>
     </>
   )
 }
